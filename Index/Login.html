@@ -28,6 +28,18 @@
 
 
 <script>
+    function prosesLogin() {
+        const id = document.getElementById('login-id').value.trim();
+        const pass = document.getElementById('login-pass').value.trim();
+
+        if (!id || !pass) {
+            alert('Harap isi ID Peserta dan Password!');
+            return;
+        }
+
+        // Setelah login berhasil, tampilkan halaman home.html
+        window.location.href = 'home.html';
+    }
 </script>
 </body>
 </html>
