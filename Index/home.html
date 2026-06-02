@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesmen Nasional SMP - Kemendikbud v2026</title>
+</head>
+<body>
+    
+<div id="layer-ujian" style="display: none;">
+    <header>
+        <div class="header-title">
+            <h1 id="nama-siswa-display">Memuat Nama Peserta...</h1>
+            <p>Subtes: Tes Kompetensi Akademik (TKA) SMP</p>
+        </div>
+        <div class="timer-box" id="timer">Sisa Waktu: --:--</div>
+    </header>
+
+    <div class="main-layout">
+        <main class="exam-area">
+            <span class="q-type-badge" id="jenis-soal-badge">Pilihan Ganda</span>
+            <div class="q-header" id="nomor-soal-display">Soal Nomor 1</div>
+            
+            <img id="soal-gambar" class="q-image" src="" alt="Gambar Soal" style="display: none;">
+            <div class="q-text" id="teks-soal-display">Memuat teks pertanyaan...</div>
+            <div class="options-list" id="box-pilihan-jawaban"></div>
+
+            <div class="nav-flex">
+                <button class="btn btn-nav-prev" id="btn-prev" onclick="geserSoal(-1)">◀ Sebelumnya</button>
+                <div id="nav-right-container">
+                    <button class="btn btn-nav-next" id="btn-next" onclick="geserSoal(1)">Berikutnya ▶</button>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <h3>Navigasi Soal</h3>
+            <div class="grid-numbers" id="grid-nomor-soal"></div>
+            <button class="btn btn-finish" onclick="klikSelesai()">Selesai Ujian</button>
+        </aside>
+    </div>
+</div>
+
+<div class="finish-container" id="layer-selesai">
+    <h2 style="color: var(--success)">Ujian Selesai!</h2>
+    <p style="color: #64748b; margin-top: 5px;">Terima kasih, data jawaban Anda telah tersimpan dengan aman ke server pusat.</p>
+    <div class="score-display" id="skor-akhir">0</div>
+    <p id="rekap-benar" style="font-weight: 600; color: #475569; margin-bottom: 25px;"></p>
+    
+    <button class="btn btn-primary" onclick="kembaliKeLogin()">Kembali ke Halaman Login</button>
+</div>
+</body>
+</html>
