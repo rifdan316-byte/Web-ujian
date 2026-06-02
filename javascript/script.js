@@ -32,9 +32,6 @@ function simpanHasil(dataUjian) {
     return { status: "sukses" };
 }
 
-// ==========================================
-// ⚙️ PENGATURAN DURASI WAKTU UJIAN (EDIT DI SINI)
-// ==========================================
 const DURASI_MENIT = 30; // Ganti angka ini untuk mengatur durasi menit ujian
 
 // ==========================================
